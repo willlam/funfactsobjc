@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FactBook.h" //so we can get access the data model throughout the app
 
 @interface ViewController ()
 
@@ -16,10 +17,11 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
- self.facts = [[NSArray alloc] initWithObjects:@"ants stretch when they wake up", @"ostritches run faster than horses", nil];
-  // so we don't have to create a new array every single time the showFunFactPressedButton is pressed
-  self.factLabel.text = [self.facts objectAtIndex:0];
-  // to load first fact about ants as the default upon launching app
+
+  self.factBook = [[FactBook alloc] init];
+  // to load FactBook, and allocate memory and space and initialize it.
+  
+  self.factLabel.text = [self.factBook randomFact];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,9 +30,9 @@
 }
 - (IBAction)showFunFactPressed {
   
-  self.factLabel.text = [self.facts objectAtIndex:1];
+  self.factLabel.text = [self.factBook.facts objectAtIndex:1];
   
-  // should refer to self.facts objectAtIndex:1 as to not throw an error because we're referencing the fact array above
+  // should refer to self.factBook.facts objectAtIndex:1 as to not throw an error because we're referencing the fact array above
 }
 
 @end
