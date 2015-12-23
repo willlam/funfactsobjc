@@ -23,5 +23,10 @@
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
 }
+- (IBAction)showFunFactPressed {
+  
+  NSArray *facts = [[NSArray alloc] initWithObjects:@"ants stretch when they wake up", @"ostritches run faster than horses", nil];
+  self.factLabel.text = [facts objectAtIndex:1];
+}
 
 @end
