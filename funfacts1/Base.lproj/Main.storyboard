@@ -17,28 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwq-8V-Q4j">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Show Another Fun Fact"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="120" y="238" width="160" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="showFunFactPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="lNY-Rq-StL"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An interesting fact goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8j-Sm-Zf1">
                                 <rect key="frame" x="268" y="176" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwq-8V-Q4j">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Show Another Fun Fact"/>
+                                <connections>
+                                    <action selector="showFunFactPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="lNY-Rq-StL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xwq-8V-Q4j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="DiF-ad-qN6"/>
                             <constraint firstItem="G8j-Sm-Zf1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="129" id="IH7-Ad-ogD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xwq-8V-Q4j" secondAttribute="trailing" constant="100" id="iPx-dV-oAf"/>
                             <constraint firstItem="G8j-Sm-Zf1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="kB5-ZU-vh1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G8j-Sm-Zf1" secondAttribute="trailing" constant="69" id="ru2-6v-YNe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xwq-8V-Q4j" secondAttribute="bottom" constant="332" id="svj-Dp-pFa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -48,6 +48,9 @@
                                 <exclude reference="IH7-Ad-ogD"/>
                                 <exclude reference="kB5-ZU-vh1"/>
                                 <exclude reference="ru2-6v-YNe"/>
+                                <exclude reference="DiF-ad-qN6"/>
+                                <exclude reference="iPx-dV-oAf"/>
+                                <exclude reference="svj-Dp-pFa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -58,6 +61,9 @@
                                 <include reference="IH7-Ad-ogD"/>
                                 <include reference="kB5-ZU-vh1"/>
                                 <include reference="ru2-6v-YNe"/>
+                                <include reference="DiF-ad-qN6"/>
+                                <include reference="iPx-dV-oAf"/>
+                                <include reference="svj-Dp-pFa"/>
                             </mask>
                         </variation>
                     </view>

@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *factLabel;
 
+@property (strong, nonatomic) NSArray *facts;
+
 
 @end
 

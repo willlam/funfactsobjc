@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+ self.facts = [[NSArray alloc] initWithObjects:@"ants stretch when they wake up", @"ostritches run faster than horses", nil];
+  // so we don't have to create a new array every single time the showFunFactPressedButton is pressed
+  self.factLabel.text = [self.facts objectAtIndex:0];
+  // to load first fact about ants as the default upon launching app
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,8 +28,9 @@
 }
 - (IBAction)showFunFactPressed {
   
-  NSArray *facts = [[NSArray alloc] initWithObjects:@"ants stretch when they wake up", @"ostritches run faster than horses", nil];
-  self.factLabel.text = [facts objectAtIndex:1];
+  self.factLabel.text = [self.facts objectAtIndex:1];
+  
+  // should refer to self.facts objectAtIndex:1 as to not throw an error because we're referencing the fact array above
 }
 
 @end
