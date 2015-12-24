@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,58 +18,150 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="An interesting fact goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8j-Sm-Zf1">
-                                <rect key="frame" x="268" y="176" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XiI-Gg-g87">
+                                <rect key="frame" x="70" y="180" width="234" height="23"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="An interesting fact goes here" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8j-Sm-Zf1">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="225" id="I0G-BM-HTc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="I0G-BM-HTc"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact" ambiguous="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="234" height="23"/>
+                                            <mask key="constraints">
+                                                <exclude reference="I0G-BM-HTc"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="G8j-Sm-Zf1" firstAttribute="leading" secondItem="XiI-Gg-g87" secondAttribute="leading" constant="32" id="7cy-Z6-HQR"/>
+                                    <constraint firstItem="G8j-Sm-Zf1" firstAttribute="centerX" secondItem="XiI-Gg-g87" secondAttribute="centerX" id="8LD-mj-f4z"/>
+                                    <constraint firstAttribute="trailing" secondItem="G8j-Sm-Zf1" secondAttribute="trailing" constant="31" id="9Tp-Tq-Eg8"/>
+                                    <constraint firstItem="G8j-Sm-Zf1" firstAttribute="trailing" secondItem="XiI-Gg-g87" secondAttribute="trailingMargin" id="Cnm-Os-hW0"/>
+                                    <constraint firstItem="G8j-Sm-Zf1" firstAttribute="top" secondItem="XiI-Gg-g87" secondAttribute="top" constant="180" id="QiL-g4-f6e"/>
+                                    <constraint firstItem="G8j-Sm-Zf1" firstAttribute="leading" secondItem="XiI-Gg-g87" secondAttribute="leadingMargin" id="chS-gm-ae6"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7cy-Z6-HQR"/>
+                                        <exclude reference="8LD-mj-f4z"/>
+                                        <exclude reference="9Tp-Tq-Eg8"/>
+                                        <exclude reference="Cnm-Os-hW0"/>
+                                        <exclude reference="QiL-g4-f6e"/>
+                                        <exclude reference="chS-gm-ae6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" axis="vertical" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="90" y="200" width="234" height="23"/>
+                                    <mask key="constraints">
+                                        <include reference="7cy-Z6-HQR"/>
+                                        <exclude reference="8LD-mj-f4z"/>
+                                        <include reference="9Tp-Tq-Eg8"/>
+                                        <include reference="Cnm-Os-hW0"/>
+                                        <include reference="QiL-g4-f6e"/>
+                                        <include reference="chS-gm-ae6"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGf-8q-Rhi">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="4Nu-5d-Yfx"/>
+                                    <constraint firstAttribute="width" constant="116" id="E9K-SS-0Zc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="0.53000000000000003" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4Nu-5d-Yfx"/>
+                                        <exclude reference="E9K-SS-0Zc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4Nu-5d-Yfx"/>
+                                        <include reference="E9K-SS-0Zc"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwq-8V-Q4j">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="mxs-7M-0nw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="tintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Show Another Fun Fact"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mxs-7M-0nw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="mxs-7M-0nw"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="showFunFactPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="lNY-Rq-StL"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="xwq-8V-Q4j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="DiF-ad-qN6"/>
-                            <constraint firstItem="G8j-Sm-Zf1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="129" id="IH7-Ad-ogD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xwq-8V-Q4j" secondAttribute="trailing" constant="100" id="iPx-dV-oAf"/>
-                            <constraint firstItem="G8j-Sm-Zf1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="kB5-ZU-vh1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="G8j-Sm-Zf1" secondAttribute="trailing" constant="69" id="ru2-6v-YNe"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xwq-8V-Q4j" secondAttribute="bottom" constant="332" id="svj-Dp-pFa"/>
+                            <constraint firstItem="EGf-8q-Rhi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="6As-2Q-hR1"/>
+                            <constraint firstItem="xwq-8V-Q4j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="EbY-W5-dME"/>
+                            <constraint firstItem="G8j-Sm-Zf1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sel-zh-U84"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xwq-8V-Q4j" secondAttribute="trailing" constant="47" id="Ste-2x-toA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xwq-8V-Q4j" secondAttribute="bottom" constant="238" id="ZI2-AZ-Tg1"/>
+                            <constraint firstItem="EGf-8q-Rhi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="t5b-FC-Snh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xwq-8V-Q4j" secondAttribute="bottom" constant="60" id="yzt-em-Y8E"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="EGf-8q-Rhi"/>
                                 <exclude reference="xwq-8V-Q4j"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="IH7-Ad-ogD"/>
-                                <exclude reference="kB5-ZU-vh1"/>
-                                <exclude reference="ru2-6v-YNe"/>
-                                <exclude reference="DiF-ad-qN6"/>
-                                <exclude reference="iPx-dV-oAf"/>
-                                <exclude reference="svj-Dp-pFa"/>
+                                <exclude reference="ZI2-AZ-Tg1"/>
+                                <exclude reference="yzt-em-Y8E"/>
+                                <exclude reference="EbY-W5-dME"/>
+                                <exclude reference="Ste-2x-toA"/>
+                                <exclude reference="6As-2Q-hR1"/>
+                                <exclude reference="t5b-FC-Snh"/>
+                                <exclude reference="Sel-zh-U84"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="EGf-8q-Rhi"/>
                                 <include reference="xwq-8V-Q4j"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="IH7-Ad-ogD"/>
-                                <include reference="kB5-ZU-vh1"/>
-                                <include reference="ru2-6v-YNe"/>
-                                <include reference="DiF-ad-qN6"/>
-                                <include reference="iPx-dV-oAf"/>
-                                <include reference="svj-Dp-pFa"/>
+                                <include reference="ZI2-AZ-Tg1"/>
+                                <include reference="yzt-em-Y8E"/>
+                                <include reference="EbY-W5-dME"/>
+                                <include reference="Ste-2x-toA"/>
+                                <include reference="6As-2Q-hR1"/>
+                                <include reference="t5b-FC-Snh"/>
+                                <include reference="Sel-zh-U84"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="factLabel" destination="G8j-Sm-Zf1" id="HNx-ks-8w8"/>
+                        <outlet property="funFactButton" destination="xwq-8V-Q4j" id="pU3-V1-Yee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
